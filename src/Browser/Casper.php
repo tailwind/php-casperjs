@@ -438,7 +438,7 @@ FRAGMENT;
             $options .= ' --' . $option . '=' . $value;
         }
 
-        exec('casperjs ' . $filename . $options, $output);
+        exec('casperjs ' . $filename.' --ssl-protocol=any ', $output);
 
         $this->_setOutput($output);
         $this->_processOutput();
